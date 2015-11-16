@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "git@github.com:TakeScoop/SwiftyButton.git" }
   s.source_files = "SwiftyButton/*.swift"
-  s.framework    = "Security"
+  s.framework    = "UIKit"
 
   s.requires_arc = true
   s.osx.deployment_target = "10.9"

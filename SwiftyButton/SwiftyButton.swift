@@ -6,7 +6,7 @@
 //  Copyright © 2015 Scoop. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public struct SwiftyButtonDefaults {
     public static var buttonColor         = UIColor.cyanColor()
