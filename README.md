@@ -39,7 +39,7 @@ Add a `UIButton` as usual, and modify the underlying class to `SwiftyButton`:
 
 Also make sure that the button type is set to custom:
 
-![](![](https://www.dropbox.com/s/4xtllxwjpqy3uia/Screenshot%202015-11-16%2015.33.45.png?dl=0))
+![](https://www.dropbox.com/s/4xtllxwjpqy3uia/Screenshot%202015-11-16%2015.33.45.png?raw=1)
 
 Defaults
 --------
