@@ -12,12 +12,11 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author       = { "Scoop" => "ops@takescoop.com" }
 
-  s.source       = { :git => "git@github.com:TakeScoop/SwiftyButton.git" }
+  s.source       = { :git => "git@github.com:TakeScoop/SwiftyButton.git", :tag => "0.0.1" }
   s.source_files = "SwiftyButton/*.swift"
   s.framework    = "UIKit"
 
   s.requires_arc = true
-  s.osx.deployment_target = "10.9"
-  s.ios.deployment_target = "8.0"
+  s.platform = :ios, "8.0"
 
 end
