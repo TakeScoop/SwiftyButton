@@ -9,7 +9,7 @@ Installation
 ------------
 
 ```
-pod 'SwiftyButton', :git => 'git@github.com:TakeScoop/SwiftyButton.git'
+pod 'SwiftyButton'
 ```
 
 Usage
