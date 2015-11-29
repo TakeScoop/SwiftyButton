@@ -5,6 +5,15 @@
       location = "group:SwiftyButton.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:SwiftyButtonPlayground.playground">
+      location = "group:Examples/DemoPlayground.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Examples/SwiftyButtonPlayground.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Examples/SwiftyButtonExample/SwiftyButtonExample.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

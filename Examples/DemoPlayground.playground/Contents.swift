@@ -2,34 +2,6 @@
 
 @testable import SwiftyButton
 
-let button = SwiftyButton(frame: CGRect(x: 0, y: 0, width: 70, height: 50))
-button.setTitle("Button", forState: .Normal)
-button.setTitleColor(UIColor.blackColor(), forState: .Normal)
-button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-
-button
-
-button.buttonColor  = UIColor(red: 52/255, green: 152/255, blue: 219/255, alpha: 1)
-button.shadowColor  = UIColor(red: 41/255, green: 128/255, blue: 185/255, alpha: 1)
-
-
-button.shadowHeight = 10
-
-button.cornerRadius = 8
-
-button.cornerRadius = 0
-
-button.highlighted = true
-
-button.buttonPressDepth = 0.5
-
-
-button.disabledButtonColor = UIColor.grayColor()
-button.disabledShadowColor = UIColor.darkGrayColor()
-button.highlighted = false
-button.enabled = false
-
-
 let container = UIView(frame: CGRectMake(0, 0, 700, 50))
 let leftButton = SwiftyButton(frame: CGRectMake(40, 0, 200, 50))
 leftButton.setTitle("Button", forState: .Normal)

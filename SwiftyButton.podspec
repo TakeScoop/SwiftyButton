@@ -19,4 +19,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.platform = :ios, "8.0"
 
+  s.dependency = 'PureLayout', '~> 3.0'
 end
