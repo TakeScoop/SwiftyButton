@@ -56,9 +56,17 @@ Custom Content
 
 ![](Examples/custom.gif)
 
-Use `SwiftyCustomContentButton ` to add custom content in a Swifty Button.
+Use `SwiftyCustomContentButton` to add custom content in a Swifty Button.
 
 This is a subclass of `SwiftyButton` that exposes a content view that moves when the button state changes. All you have to do is add your views inside `button.customContentView` and setup layout constraints relative to this view.
+
+### Install
+
+```
+pod `SwiftyButton/CustomContent`
+```
+
+### Usage
 
 Here is how you would create a button similar to the one above (here we used [PureLayout](https://github.com/PureLayout/PureLayout) for constraints):
 
