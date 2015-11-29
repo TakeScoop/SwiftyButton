@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.platform = :ios, "8.0"
 
   s.subspec 'CustomContent' do |sp|
-    sp.source_files = "SwiftyButton/SwiftyCustomContentButton.swift"
+    sp.source_files = "SwiftyButton/*.swift"
     sp.dependency 'PureLayout', '~> 3.0'
   end
 end
