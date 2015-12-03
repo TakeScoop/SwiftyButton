@@ -16,11 +16,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let button = SwiftyCustomContentButton()
+        let buttonColor = UIColor(red: 52/255, green: 152/255, blue: 219/255, alpha: 1)
+        let shadowColor = UIColor(red: 41/255, green: 128/255, blue: 185/255, alpha: 1)
+        
+        let button = SwiftyCustomContentButton(style: .Pressable(buttonColor: buttonColor, shadowColor: shadowColor))
         customButtonContainerView.addSubview(button)
         button.autoPinEdgesToSuperviewEdges()
-        button.buttonColor = UIColor(red: 52/255, green: 152/255, blue: 219/255, alpha: 1)
-        button.shadowColor = UIColor(red: 41/255, green: 128/255, blue: 185/255, alpha: 1)
         
         let indicator = UIActivityIndicatorView(activityIndicatorStyle: .White)
         button.customContentView.addSubview(indicator)

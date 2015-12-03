@@ -8,8 +8,11 @@
 
 import UIKit
 
+// MARK: - Defaults
+
 public struct SwiftyButtonDefaults {
     public static var buttonColor         = UIColor.cyanColor()
+    public static var highlightedColor    = UIColor.cyanColor()
     public static var shadowColor         = UIColor.blueColor()
     public static var shadowHeight        = CGFloat(3)
     public static var cornerRadius        = CGFloat(3)
@@ -22,7 +25,15 @@ public struct SwiftyButtonDefaults {
 @IBDesignable
 public class SwiftyButton: UIButton {
     
+    // MARK: - Public properties
+    
     @IBInspectable public var buttonColor: UIColor = SwiftyButtonDefaults.buttonColor {
+        didSet {
+            updateBackgroundImages()
+        }
+    }
+    
+    @IBInspectable public var highlightedColor: UIColor = SwiftyButtonDefaults.highlightedColor {
         didSet {
             updateBackgroundImages()
         }
@@ -66,6 +77,49 @@ public class SwiftyButton: UIButton {
         }
     }
     
+    // MARK: - Style
+    
+    public enum Style {
+        
+        /**
+         Flat button (no 3D effect) that changes color on touch.
+         Using this style will set shadowHeight = 0 and shadowColor = UIColor.clearColor().
+         
+         - parameter buttonColor:      Button color in the normal state
+         - parameter highlightedColor: Button color in the highlighted state
+         */
+        case Flat(buttonColor: UIColor, highlightedColor: UIColor)
+        
+        /**
+         Pressable (3D) button that moves on press.
+         Using this style will set highlightedColor = buttonColor, and the default shadowHeight will be used.
+         
+         - parameter buttonColor: Button color in the normal state
+         - parameter shadowColor: Shadow color of the button
+         */
+        case Pressable(buttonColor: UIColor, shadowColor: UIColor)
+    }
+    
+    // Note: there is no way to "get" the button style after calling `updateWithStyle`, because all properties
+    // can be changed at any time, making the style concept mutable.
+    public func updateWithStyle(style: Style) {
+        switch style {
+        case .Flat(let buttonColor, let highlightedColor):
+            self.buttonColor      = buttonColor
+            self.highlightedColor = highlightedColor
+            self.shadowColor      = .clearColor()
+            self.shadowHeight     = 0
+            break
+        case .Pressable(let buttonColor, let shadowColor):
+            self.buttonColor      = buttonColor
+            self.highlightedColor = buttonColor
+            self.shadowColor      = shadowColor
+            self.shadowHeight     = SwiftyButtonDefaults.shadowHeight
+        }
+    }
+    
+    // MARK: - UIButton
+    
     override public var highlighted: Bool {
 		get {
             return super.highlighted
@@ -74,6 +128,11 @@ public class SwiftyButton: UIButton {
             super.highlighted = newValue
             updateTitleInsets()
         }
+    }
+    
+    public convenience init(style: Style) {
+        self.init()
+        updateWithStyle(style)
     }
     
     public override init(frame: CGRect) {
@@ -90,6 +149,8 @@ public class SwiftyButton: UIButton {
         updateTitleInsets()
     }
     
+    // MARK: - Internal methods
+    
     func configure() {
         adjustsImageWhenDisabled    = false
         adjustsImageWhenHighlighted = false
@@ -104,7 +165,7 @@ public class SwiftyButton: UIButton {
     func updateBackgroundImages() {
         
         let normalImage = SwiftyButton.buttonImageWithColor(buttonColor, shadowHeight: shadowHeight, shadowColor: shadowColor, cornerRadius: cornerRadius)
-        let highlightedImage = SwiftyButton.highlightedButtonImageWithColor(buttonColor, shadowHeight: shadowHeight, shadowColor: shadowColor, cornerRadius: cornerRadius, buttonPressDepth: buttonPressDepth)
+        let highlightedImage = SwiftyButton.highlightedButtonImageWithColor(highlightedColor, shadowHeight: shadowHeight, shadowColor: shadowColor, cornerRadius: cornerRadius, buttonPressDepth: buttonPressDepth)
         let disabledImage = SwiftyButton.buttonImageWithColor(disabledButtonColor, shadowHeight: shadowHeight, shadowColor: disabledShadowColor, cornerRadius: cornerRadius)
         
         setBackgroundImage(normalImage,      forState: .Normal)

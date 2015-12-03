@@ -15,23 +15,53 @@ pod 'SwiftyButton'
 Usage
 -----
 
-### From code
+### Flat Button
+
+![](Examples/flat-button.gif)
 
 ```swift
-let button = SwiftyButton()
-button.setTitle("Button", forState: .Normal)
+let buttonColor = .cyanColor()
+let highlightedColor = .blueColor()
+let button = SwiftyButton(style: .Flat(buttonColor: buttonColor, highlightedColor: highlightedColor))
 
+// Properties
+button.cornerRadius = 5
+button.disabledButtonColor = .grayColor()
+```
+
+### Pressable Button
+
+![](Examples/pressable-button.gif)
+
+```swift
+let buttonColor = .cyanColor()
+let shadowColor = .blueColor()
+let button = SwiftyButton(style: .Pressable(buttonColor: buttonColor, shadowColor: shadowColor))
+
+// Properties
+button.cornerRadius = 5
+button.disabledButtonColor = .grayColor()
+button.disabledShadowColor = .darkGrayColor()
+button.shadowHeight = 10
+button.buttonPressDepth = 0.5 // In percentage of shadowHeight
+```
+
+### All Properties
+
+Here is a list of all the properties of SwiftyButton that you can modify. Those are all editable directly from Interface Builder. See `SwiftyButtonDefaults` to set defaults for those properties.
+
+```swift
 button.buttonColor = UIColor.cyanColor()
+button.highlightedColor = UIColor.cyanColor()
 button.shadowColor = UIColor.blueColor()
 button.disabledButtonColor = UIColor.grayColor()
 button.disabledShadowColor = UIColor.darkGrayColor()
 button.shadowHeight = 10
 button.cornerRadius = 8
-button.highlighted = true
 button.buttonPressDepth = 0.5 // In percentage of shadowHeight
 ```
 
-### From a storyboard
+### Interface Builder (Storyboard/XIB)
 
 Add a `UIButton` as usual, modify the underlying class to `SwiftyButton`, and make sure that the button type is set to `Custom`:
 
