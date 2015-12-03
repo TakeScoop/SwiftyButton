@@ -1,6 +1,14 @@
 Change Log
 ==========
 
+## [0.4.0]
+
+ - **Breaking**: Removed `SwiftyButton.Style` since it made the interface less flexible.
+ - Fixed a crash that would occur when `button.shadowHeight = 0 && button.cornerRadius = 0`
+ - Made `higlightedButtonColor` nullable. The button won't change color if this property is `nil` (default).
+
+**Updating from v0.3.0?**: See the [README](./README.md) to learn how to convert from the `Flat/Pressable` button style using custom properties.
+
 ## [0.3.0]
 
  - SwiftyButton can now be configured with a Style (Flat or Pressable).
@@ -19,6 +27,7 @@ Change Log
 
  - Initial release
 
+[0.4.0]: https://github.com/TakeScoop/scoop-ios/compare/0.3.0...0.4.0
 [0.3.0]: https://github.com/TakeScoop/scoop-ios/compare/0.2.0...0.3.0
 [0.2.0]: https://github.com/TakeScoop/scoop-ios/compare/0.1.0...0.2.0
 [0.1.0]: https://github.com/TakeScoop/scoop-ios/compare/79b617a28cf2817d9de93f5d4c75a270bbf8ba67...0.1.0

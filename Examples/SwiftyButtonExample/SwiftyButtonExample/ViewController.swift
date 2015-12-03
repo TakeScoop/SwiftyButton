@@ -16,12 +16,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let buttonColor = UIColor(red: 52/255, green: 152/255, blue: 219/255, alpha: 1)
-        let shadowColor = UIColor(red: 41/255, green: 128/255, blue: 185/255, alpha: 1)
-        
-        let button = SwiftyCustomContentButton(style: .Pressable(buttonColor: buttonColor, shadowColor: shadowColor))
+        let button = SwiftyCustomContentButton()
         customButtonContainerView.addSubview(button)
         button.autoPinEdgesToSuperviewEdges()
+        button.buttonColor = UIColor(red: 52/255, green: 152/255, blue: 219/255, alpha: 1)
+        button.shadowColor = UIColor(red: 41/255, green: 128/255, blue: 185/255, alpha: 1)
         
         let indicator = UIActivityIndicatorView(activityIndicatorStyle: .White)
         button.customContentView.addSubview(indicator)
@@ -34,6 +33,18 @@ class ViewController: UIViewController {
         label.autoPinEdge(.Left, toEdge: .Right, ofView: indicator, withOffset: 10)
         label.text = "Loading..."
         label.textColor = UIColor.whiteColor()
+        
+        // Regression: Make sure that button with cornerRadius = 0 and shadowHeight = 0 doesn't crash
+        // Was crashing in 0.3.1
+        let zeroButton = SwiftyButton()
+        zeroButton.shadowHeight = 0
+        zeroButton.cornerRadius = 0
+        zeroButton.highlightedColor = UIColor.blueColor()
+        view.addSubview(zeroButton)
+        zeroButton.autoPinEdge(.Top, toEdge: .Bottom, ofView: button, withOffset: 30)
+        zeroButton.autoAlignAxisToSuperviewAxis(.Vertical)
+        zeroButton.autoSetDimensionsToSize(CGSizeMake(200, 40))
+        zeroButton.setTitle("Zero Button", forState: .Normal)
     }
 }
 

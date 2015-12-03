@@ -37,7 +37,9 @@ extension SwiftyButton {
         frontImageOffset: CGFloat) -> UIImage {
         
         // Create foreground and background images
-        let size       = CGSize(width: cornerRadius * 2 + shadowHeight, height: cornerRadius * 2 + shadowHeight)
+        let width      = max(1, cornerRadius * 2 + shadowHeight)
+        let height     = max(1, cornerRadius * 2 + shadowHeight)
+        let size       = CGSize(width: width, height: height)
         let frontImage = imageWithColor(color, size: size, cornerRadius: cornerRadius)
         let backImage  = imageWithColor(shadowColor, size: size, cornerRadius: cornerRadius)
         

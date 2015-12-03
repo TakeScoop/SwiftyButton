@@ -20,13 +20,11 @@ Usage
 ![](Examples/flat-button.gif)
 
 ```swift
-let buttonColor = .cyanColor()
-let highlightedColor = .blueColor()
-let button = SwiftyButton(style: .Flat(buttonColor: buttonColor, highlightedColor: highlightedColor))
-
-// Properties
-button.cornerRadius = 5
-button.disabledButtonColor = .grayColor()
+let button = SwiftyButton()
+button.buttonColor      = .cyanColor()
+button.highlightedColor = .blueColor()
+button.shadowHeight     = 0
+button.cornerRadius     = 5
 ```
 
 ### Pressable Button
@@ -34,16 +32,11 @@ button.disabledButtonColor = .grayColor()
 ![](Examples/pressable-button.gif)
 
 ```swift
-let buttonColor = .cyanColor()
-let shadowColor = .blueColor()
-let button = SwiftyButton(style: .Pressable(buttonColor: buttonColor, shadowColor: shadowColor))
-
-// Properties
+let button = SwiftyButton()
+button.buttonColor  = .cyanColor()
+button.shadowColor  = .blueColor()
+button.shadowHeight = 5
 button.cornerRadius = 5
-button.disabledButtonColor = .grayColor()
-button.disabledShadowColor = .darkGrayColor()
-button.shadowHeight = 10
-button.buttonPressDepth = 0.5 // In percentage of shadowHeight
 ```
 
 ### All Properties
@@ -51,14 +44,14 @@ button.buttonPressDepth = 0.5 // In percentage of shadowHeight
 Here is a list of all the properties of SwiftyButton that you can modify. Those are all editable directly from Interface Builder. See `SwiftyButtonDefaults` to set defaults for those properties.
 
 ```swift
-button.buttonColor = UIColor.cyanColor()
-button.highlightedColor = UIColor.cyanColor()
-button.shadowColor = UIColor.blueColor()
+button.buttonColor         = UIColor.cyanColor()
+button.highlightedColor    = UIColor.cyanColor()
+button.shadowColor         = UIColor.blueColor()
 button.disabledButtonColor = UIColor.grayColor()
 button.disabledShadowColor = UIColor.darkGrayColor()
-button.shadowHeight = 10
-button.cornerRadius = 8
-button.buttonPressDepth = 0.5 // In percentage of shadowHeight
+button.shadowHeight        = 10
+button.cornerRadius        = 8
+button.buttonPressDepth    = 0.5 // In percentage of shadowHeight
 ```
 
 ### Interface Builder (Storyboard/XIB)
