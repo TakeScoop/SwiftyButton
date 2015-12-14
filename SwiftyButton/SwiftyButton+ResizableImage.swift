@@ -40,14 +40,18 @@ extension SwiftyButton {
         let width      = max(1, cornerRadius * 2 + shadowHeight)
         let height     = max(1, cornerRadius * 2 + shadowHeight)
         let size       = CGSize(width: width, height: height)
+            
         let frontImage = imageWithColor(color, size: size, cornerRadius: cornerRadius)
-        let backImage  = imageWithColor(shadowColor, size: size, cornerRadius: cornerRadius)
+        var backImage: UIImage? = nil
+        if shadowHeight != 0 {
+            backImage = imageWithColor(shadowColor, size: size, cornerRadius: cornerRadius)
+        }
         
         let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height + shadowHeight)
         
         // Draw background image then foreground image
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0)
-        backImage.drawAtPoint(CGPoint(x: 0, y: shadowHeight))
+        backImage?.drawAtPoint(CGPoint(x: 0, y: shadowHeight))
         frontImage.drawAtPoint(CGPoint(x: 0, y: frontImageOffset))
         let nonResizableImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()

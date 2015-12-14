@@ -1,6 +1,11 @@
 Change Log
 ==========
 
+## [Unreleased (master)][master]
+
+ - Improved performance around background image generation when shadow height is zero.
+   [#1](https://github.com/TakeScoop/SwiftyButton/issues/1)
+
 ## [0.4.0]
 
  - **Breaking**: Removed `SwiftyButton.Style` since it made the interface less flexible.
@@ -27,6 +32,7 @@ Change Log
 
  - Initial release
 
+[master]: https://github.com/TakeScoop/scoop-ios/compare/0.4.0...master
 [0.4.0]: https://github.com/TakeScoop/scoop-ios/compare/0.3.0...0.4.0
 [0.3.0]: https://github.com/TakeScoop/scoop-ios/compare/0.2.0...0.3.0
 [0.2.0]: https://github.com/TakeScoop/scoop-ios/compare/0.1.0...0.2.0
