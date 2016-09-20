@@ -1,7 +1,9 @@
 Change Log
 ==========
 
-## [Unreleased (master)][master]
+## [master]
+
+## [0.5.0]
 
  - **Breaking**: Converted code base to Swift 3.0.
  - Improved performance around background image generation when shadow height is zero.
@@ -33,7 +35,8 @@ Change Log
 
  - Initial release
 
-[master]: https://github.com/TakeScoop/scoop-ios/compare/0.4.0...master
+[master]: https://github.com/TakeScoop/scoop-ios/compare/0.5.0...master
+[0.5.0]: https://github.com/TakeScoop/scoop-ios/compare/0.4.0...0.5.0
 [0.4.0]: https://github.com/TakeScoop/scoop-ios/compare/0.3.0...0.4.0
 [0.3.0]: https://github.com/TakeScoop/scoop-ios/compare/0.2.0...0.3.0
 [0.2.0]: https://github.com/TakeScoop/scoop-ios/compare/0.1.0...0.2.0

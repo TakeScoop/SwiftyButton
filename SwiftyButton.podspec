@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SwiftyButton"
-  s.version      = "0.4.0"
+  s.version      = "0.5.0"
   s.summary      = "Simple and customizable button in Swift"
 
   s.description  = <<-DESC
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author       = { "Scoop" => "ops@takescoop.com" }
 
-  s.source       = { :git => "https://github.com/TakeScoop/SwiftyButton.git", :tag => "0.4.0" }
+  s.source       = { :git => "https://github.com/TakeScoop/SwiftyButton.git", :tag => s.version }
   s.source_files = "SwiftyButton/SwiftyButton.swift", "SwiftyButton/SwiftyButton+ResizableImage.swift"
   s.framework    = "UIKit"
 

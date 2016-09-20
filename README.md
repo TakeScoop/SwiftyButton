@@ -21,10 +21,10 @@ Usage
 
 ```swift
 let button = SwiftyButton()
-button.buttonColor      = .cyan()
-button.highlightedColor = .blue()
-button.shadowHeight     = 0
-button.cornerRadius     = 5
+button.buttonColor = .cyan
+button.highlightedColor = .blue
+button.shadowHeight = 0
+button.cornerRadius  = 5
 ```
 
 ### Pressable Button
@@ -33,8 +33,8 @@ button.cornerRadius     = 5
 
 ```swift
 let button = SwiftyButton()
-button.buttonColor  = .cyan()
-button.shadowColor  = .blue()
+button.buttonColor = .cyan
+button.shadowColor = .blue
 button.shadowHeight = 5
 button.cornerRadius = 5
 ```
@@ -44,14 +44,14 @@ button.cornerRadius = 5
 Here is a list of all the properties of SwiftyButton that you can modify. Those are all editable directly from Interface Builder. See `SwiftyButtonDefaults` to set defaults for those properties.
 
 ```swift
-button.buttonColor         = UIColor.cyan()
-button.highlightedColor    = UIColor.cyan()
-button.shadowColor         = UIColor.blue()
-button.disabledButtonColor = UIColor.gray()
-button.disabledShadowColor = UIColor.darkGray()
-button.shadowHeight        = 10
-button.cornerRadius        = 8
-button.buttonPressDepth    = 0.5 // In percentage of shadowHeight
+button.buttonColor = .cyan
+button.highlightedColor = .cyan
+button.shadowColor = .blue
+button.disabledButtonColor = .gray
+button.disabledShadowColor = .darkGray
+button.shadowHeight = 10
+button.cornerRadius = 8
+button.buttonPressDepth = 0.5 // In percentage of shadowHeight
 ```
 
 ### Interface Builder (Storyboard/XIB)
@@ -69,7 +69,7 @@ Defaults
 You can set defaults that will be applied for any new instance of SwiftyButton by modifying the `SwiftyButtonDefaults` structure:
 
 ```swift
-SwiftyButtonDefaults.buttonColor = UIColor.cyan()
+SwiftyButtonDefaults.buttonColor = .cyan
 SwiftyButtonDefaults.cornerRadius = 8
 ...
 ```
