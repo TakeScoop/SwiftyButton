@@ -22,29 +22,29 @@ class ViewController: UIViewController {
         button.buttonColor = UIColor(red: 52/255, green: 152/255, blue: 219/255, alpha: 1)
         button.shadowColor = UIColor(red: 41/255, green: 128/255, blue: 185/255, alpha: 1)
         
-        let indicator = UIActivityIndicatorView(activityIndicatorStyle: .White)
+        let indicator = UIActivityIndicatorView(activityIndicatorStyle: .white)
         button.customContentView.addSubview(indicator)
-        indicator.autoPinEdgesToSuperviewEdgesWithInsets(UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 0), excludingEdge: .Right)
+        indicator.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 0), excludingEdge: .right)
         indicator.startAnimating()
         
         let label = UILabel()
         button.customContentView.addSubview(label)
-        label.autoPinEdgesToSuperviewEdgesWithInsets(UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 10), excludingEdge: .Left)
-        label.autoPinEdge(.Left, toEdge: .Right, ofView: indicator, withOffset: 10)
+        label.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 10), excludingEdge: .left)
+        label.autoPinEdge(.left, to: .right, of: indicator, withOffset: 10)
         label.text = "Loading..."
-        label.textColor = UIColor.whiteColor()
+        label.textColor = UIColor.white
         
         // Regression: Make sure that button with cornerRadius = 0 and shadowHeight = 0 doesn't crash
         // Was crashing in 0.3.1
         let zeroButton = SwiftyButton()
         zeroButton.shadowHeight = 0
         zeroButton.cornerRadius = 0
-        zeroButton.highlightedColor = UIColor.blueColor()
+        zeroButton.highlightedColor = UIColor.blue
         view.addSubview(zeroButton)
-        zeroButton.autoPinEdge(.Top, toEdge: .Bottom, ofView: button, withOffset: 30)
-        zeroButton.autoAlignAxisToSuperviewAxis(.Vertical)
-        zeroButton.autoSetDimensionsToSize(CGSizeMake(200, 40))
-        zeroButton.setTitle("Zero Button", forState: .Normal)
+        zeroButton.autoPinEdge(.top, to: .bottom, of: button, withOffset: 30)
+        zeroButton.autoAlignAxis(toSuperviewAxis: .vertical)
+        zeroButton.autoSetDimensions(to: CGSize(width: 200, height: 40))
+        zeroButton.setTitle("Zero Button", for: .normal)
     }
 }
 

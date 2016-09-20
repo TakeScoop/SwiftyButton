@@ -3,6 +3,7 @@ Change Log
 
 ## [Unreleased (master)][master]
 
+ - **Breaking**: Converted code base to Swift 3.0.
  - Improved performance around background image generation when shadow height is zero.
    [#1](https://github.com/TakeScoop/SwiftyButton/issues/1)
 

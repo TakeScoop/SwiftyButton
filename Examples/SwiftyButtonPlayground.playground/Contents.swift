@@ -3,8 +3,8 @@
 @testable import SwiftyButton
 
 let button = SwiftyButton(frame: CGRect(x: 0, y: 0, width: 70, height: 50))
-button.setTitle("Button", forState: .Normal)
-button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+button.setTitle("Button", for: .normal)
+button.setTitleColor(UIColor.white(), for: .normal)
 
 button
 
@@ -18,23 +18,23 @@ button.cornerRadius = 8
 
 button.cornerRadius = 0
 
-button.highlighted = true
+button.isHighlighted = true
 
 button.buttonPressDepth = 0.5
 
 
-button.disabledButtonColor = UIColor.grayColor()
-button.disabledShadowColor = UIColor.darkGrayColor()
-button.highlighted = false
-button.enabled = false
+button.disabledButtonColor = UIColor.gray()
+button.disabledShadowColor = UIColor.darkGray()
+button.isHighlighted = false
+button.isEnabled = false
 
 let flatButton = SwiftyButton(frame: CGRect(x: 0, y: 0, width: 120, height: 50))
-flatButton.setTitle("Flat Button", forState: .Normal)
-flatButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-flatButton.buttonColor = UIColor.greenColor()
-flatButton.highlightedColor = UIColor.darkGrayColor()
+flatButton.setTitle("Flat Button", for: .normal)
+flatButton.setTitleColor(UIColor.white(), for: .normal)
+flatButton.buttonColor = UIColor.green()
+flatButton.highlightedColor = UIColor.darkGray()
 flatButton.shadowHeight = 0
 flatButton
 
-flatButton.highlighted = true
+flatButton.isHighlighted = true
 flatButton

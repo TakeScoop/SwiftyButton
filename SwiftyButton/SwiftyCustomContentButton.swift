@@ -9,7 +9,7 @@
 import Foundation
 import PureLayout
 
-public class SwiftyCustomContentButton: SwiftyButton {
+open class SwiftyCustomContentButton: SwiftyButton {
     
     public let customContentView = UIView()
     
@@ -17,8 +17,8 @@ public class SwiftyCustomContentButton: SwiftyButton {
     private var customContentViewBottomConstraint: NSLayoutConstraint?
     
     // @hack Intercept all touches on subviews
-    public override func hitTest(point: CGPoint, withEvent event: UIEvent?) -> UIView? {
-        if let _ = super.hitTest(point, withEvent: event) {
+    override open func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        if let _ = super.hitTest(point, with: event) {
             return self
         }
         return nil
@@ -34,9 +34,9 @@ public class SwiftyCustomContentButton: SwiftyButton {
         super.configure()
         
         addSubview(customContentView)
-        customContentViewTopConstraint    = customContentView.autoPinEdgeToSuperviewEdge(.Top)
-        customContentViewBottomConstraint = customContentView.autoPinEdgeToSuperviewEdge(.Bottom)
-        customContentView.autoPinEdgeToSuperviewEdge(.Left)
-        customContentView.autoPinEdgeToSuperviewEdge(.Right)
+        customContentViewTopConstraint = customContentView.autoPinEdge(toSuperviewEdge: .top)
+        customContentViewBottomConstraint = customContentView.autoPinEdge(toSuperviewEdge: .bottom)
+        customContentView.autoPinEdge(toSuperviewEdge: .left)
+        customContentView.autoPinEdge(toSuperviewEdge: .right)
     }
 }

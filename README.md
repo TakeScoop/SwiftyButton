@@ -21,8 +21,8 @@ Usage
 
 ```swift
 let button = SwiftyButton()
-button.buttonColor      = .cyanColor()
-button.highlightedColor = .blueColor()
+button.buttonColor      = .cyan()
+button.highlightedColor = .blue()
 button.shadowHeight     = 0
 button.cornerRadius     = 5
 ```
@@ -33,8 +33,8 @@ button.cornerRadius     = 5
 
 ```swift
 let button = SwiftyButton()
-button.buttonColor  = .cyanColor()
-button.shadowColor  = .blueColor()
+button.buttonColor  = .cyan()
+button.shadowColor  = .blue()
 button.shadowHeight = 5
 button.cornerRadius = 5
 ```
@@ -44,11 +44,11 @@ button.cornerRadius = 5
 Here is a list of all the properties of SwiftyButton that you can modify. Those are all editable directly from Interface Builder. See `SwiftyButtonDefaults` to set defaults for those properties.
 
 ```swift
-button.buttonColor         = UIColor.cyanColor()
-button.highlightedColor    = UIColor.cyanColor()
-button.shadowColor         = UIColor.blueColor()
-button.disabledButtonColor = UIColor.grayColor()
-button.disabledShadowColor = UIColor.darkGrayColor()
+button.buttonColor         = UIColor.cyan()
+button.highlightedColor    = UIColor.cyan()
+button.shadowColor         = UIColor.blue()
+button.disabledButtonColor = UIColor.gray()
+button.disabledShadowColor = UIColor.darkGray()
 button.shadowHeight        = 10
 button.cornerRadius        = 8
 button.buttonPressDepth    = 0.5 // In percentage of shadowHeight
@@ -69,7 +69,7 @@ Defaults
 You can set defaults that will be applied for any new instance of SwiftyButton by modifying the `SwiftyButtonDefaults` structure:
 
 ```swift
-SwiftyButtonDefaults.buttonColor = UIColor.cyanColor()
+SwiftyButtonDefaults.buttonColor = UIColor.cyan()
 SwiftyButtonDefaults.cornerRadius = 8
 ...
 ```
@@ -95,18 +95,23 @@ Here is how you would create a button similar to the one above (here we used [Pu
 
 ```swift
 let button = SwiftyCustomContentButton()
+let button = SwiftyCustomContentButton()
+customButtonContainerView.addSubview(button)
+button.autoPinEdgesToSuperviewEdges()
+button.buttonColor = UIColor(red: 52/255, green: 152/255, blue: 219/255, alpha: 1)
+button.shadowColor = UIColor(red: 41/255, green: 128/255, blue: 185/255, alpha: 1)
 
-let indicator = UIActivityIndicatorView(activityIndicatorStyle: .White)
+let indicator = UIActivityIndicatorView(activityIndicatorStyle: .white)
 button.customContentView.addSubview(indicator)
-indicator.autoPinEdgesToSuperviewEdgesWithInsets(UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 0), excludingEdge: .Right)
+indicator.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 0), excludingEdge: .right)
 indicator.startAnimating()
 
 let label = UILabel()
 button.customContentView.addSubview(label)
-label.autoPinEdgesToSuperviewEdgesWithInsets(UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 10), excludingEdge: .Left)
-label.autoPinEdge(.Left, toEdge: .Right, ofView: indicator, withOffset: 10)
+label.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 10), excludingEdge: .left)
+label.autoPinEdge(.left, to: .right, of: indicator, withOffset: 10)
 label.text = "Loading..."
-label.textColor = UIColor.whiteColor()
+label.textColor = UIColor.white()
 ``` 
 
 More examples

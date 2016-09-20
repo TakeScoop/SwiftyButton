@@ -11,20 +11,20 @@ import UIKit
 // MARK: - Defaults
 
 public struct SwiftyButtonDefaults {
-    public static var buttonColor         = UIColor.cyanColor()
-    public static var shadowColor         = UIColor.blueColor()
+    public static var buttonColor         = UIColor.cyan
+    public static var shadowColor         = UIColor.blue
     public static var shadowHeight        = CGFloat(3)
     public static var cornerRadius        = CGFloat(3)
-    public static var disabledButtonColor = UIColor.lightGrayColor()
-    public static var disabledShadowColor = UIColor.darkGrayColor()
-    public static var titleFont           = UIFont.systemFontOfSize(20)
+    public static var disabledButtonColor = UIColor.lightGray
+    public static var disabledShadowColor = UIColor.darkGray
+    public static var titleFont           = UIFont.systemFont(ofSize: 20)
     public static var buttonPressDepth    = CGFloat(0.7) // In percentage of shadowHeight
     
     public static var highlightedColor: UIColor? = nil
 }
 
 @IBDesignable
-public class SwiftyButton: UIButton {
+open class SwiftyButton: UIButton {
     
     // MARK: - Public properties
     
@@ -80,12 +80,12 @@ public class SwiftyButton: UIButton {
     
     // MARK: - UIButton
     
-    override public var highlighted: Bool {
+    override open var isHighlighted: Bool {
 		get {
-            return super.highlighted
+            return super.isHighlighted
         }
         set {
-            super.highlighted = newValue
+            super.isHighlighted = newValue
             updateTitleInsets()
         }
     }
@@ -112,19 +112,19 @@ public class SwiftyButton: UIButton {
     }
     
     func updateTitleInsets() {
-        let topPadding = highlighted ? shadowHeight * buttonPressDepth : 0
-        let bottomPadding = highlighted ? shadowHeight * (1 - buttonPressDepth) : shadowHeight
+        let topPadding = isHighlighted ? shadowHeight * buttonPressDepth : 0
+        let bottomPadding = isHighlighted ? shadowHeight * (1 - buttonPressDepth) : shadowHeight
         titleEdgeInsets = UIEdgeInsets(top: topPadding, left: 0, bottom: bottomPadding, right: 0)
     }
     
     func updateBackgroundImages() {
         
-        let normalImage = SwiftyButton.buttonImageWithColor(buttonColor, shadowHeight: shadowHeight, shadowColor: shadowColor, cornerRadius: cornerRadius)
-        let highlightedImage = SwiftyButton.highlightedButtonImageWithColor(highlightedColor ?? buttonColor, shadowHeight: shadowHeight, shadowColor: shadowColor, cornerRadius: cornerRadius, buttonPressDepth: buttonPressDepth)
-        let disabledImage = SwiftyButton.buttonImageWithColor(disabledButtonColor, shadowHeight: shadowHeight, shadowColor: disabledShadowColor, cornerRadius: cornerRadius)
+        let normalImage = SwiftyButton.buttonImage(color: buttonColor, shadowHeight: shadowHeight, shadowColor: shadowColor, cornerRadius: cornerRadius)
+        let highlightedImage = SwiftyButton.highlightedButtonImage(color: highlightedColor ?? buttonColor, shadowHeight: shadowHeight, shadowColor: shadowColor, cornerRadius: cornerRadius, buttonPressDepth: buttonPressDepth)
+        let disabledImage = SwiftyButton.buttonImage(color: disabledButtonColor, shadowHeight: shadowHeight, shadowColor: disabledShadowColor, cornerRadius: cornerRadius)
         
-        setBackgroundImage(normalImage,      forState: .Normal)
-        setBackgroundImage(highlightedImage, forState: .Highlighted)
-        setBackgroundImage(disabledImage,    forState: .Disabled)
+        setBackgroundImage(normalImage,      for: .normal)
+        setBackgroundImage(highlightedImage, for: .highlighted)
+        setBackgroundImage(disabledImage,    for: .disabled)
     }
 }
