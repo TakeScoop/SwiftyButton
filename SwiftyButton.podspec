@@ -13,14 +13,9 @@ Pod::Spec.new do |s|
   s.author       = { "Scoop" => "ops@takescoop.com" }
 
   s.source       = { :git => "https://github.com/TakeScoop/SwiftyButton.git", :tag => s.version }
-  s.source_files = "SwiftyButton/SwiftyButton.swift", "SwiftyButton/SwiftyButton+ResizableImage.swift"
+  s.source_files = "SwiftyButton/*.swift"
   s.framework    = "UIKit"
 
   s.requires_arc = true
   s.platform = :ios, "8.0"
-
-  s.subspec 'CustomContent' do |sp|
-    sp.source_files = "SwiftyButton/*.swift"
-    sp.dependency 'PureLayout', '~> 3.0'
-  end
 end

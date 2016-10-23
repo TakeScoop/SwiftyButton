@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		65FDF09739ACFE572F95E67B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 812783EF6177ECF8A694BB5E /* Pods.framework */; };
 		C0372F2E1C0694F500E00B85 /* SwiftyCustomContentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0372F2D1C0694F500E00B85 /* SwiftyCustomContentButton.swift */; };
 		C0F04E0F1BFA83F700E9925E /* SwiftyButton.h in Headers */ = {isa = PBXBuildFile; fileRef = C0F04E0E1BFA83F700E9925E /* SwiftyButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C0F04E181BFA842B00E9925E /* SwiftyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F04E161BFA842B00E9925E /* SwiftyButton.swift */; };
@@ -15,8 +14,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5CB52FFAE920C6E710A6A10A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		732597CC58FF5185E850D27B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		812783EF6177ECF8A694BB5E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0372F2D1C0694F500E00B85 /* SwiftyCustomContentButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyCustomContentButton.swift; sourceTree = "<group>"; };
 		C0F04E0B1BFA83F700E9925E /* SwiftyButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -31,7 +28,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65FDF09739ACFE572F95E67B /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,21 +42,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B623975D33EE45AD9F675E18 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				5CB52FFAE920C6E710A6A10A /* Pods.debug.xcconfig */,
-				732597CC58FF5185E850D27B /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		C0F04E011BFA83F700E9925E = {
 			isa = PBXGroup;
 			children = (
 				C0F04E0D1BFA83F700E9925E /* SwiftyButton */,
 				C0F04E0C1BFA83F700E9925E /* Products */,
-				B623975D33EE45AD9F675E18 /* Pods */,
 				30A2B1221A3581DFF7D1206B /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -103,12 +89,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C0F04E131BFA83F700E9925E /* Build configuration list for PBXNativeTarget "SwiftyButton" */;
 			buildPhases = (
-				58AEE54A3B5077B862919504 /* Check Pods Manifest.lock */,
 				C0F04E061BFA83F700E9925E /* Sources */,
 				C0F04E071BFA83F700E9925E /* Frameworks */,
 				C0F04E081BFA83F700E9925E /* Headers */,
 				C0F04E091BFA83F700E9925E /* Resources */,
-				76CBCDCFD9B69BDA1C866BA9 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -160,39 +144,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		58AEE54A3B5077B862919504 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		76CBCDCFD9B69BDA1C866BA9 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C0F04E061BFA83F700E9925E /* Sources */ = {
@@ -301,7 +252,6 @@
 		};
 		C0F04E141BFA83F700E9925E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5CB52FFAE920C6E710A6A10A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
@@ -321,7 +271,6 @@
 		};
 		C0F04E151BFA83F700E9925E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 732597CC58FF5185E850D27B /* Pods.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;

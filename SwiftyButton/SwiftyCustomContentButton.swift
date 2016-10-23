@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import PureLayout
 
 open class SwiftyCustomContentButton: SwiftyButton {
     
@@ -33,10 +32,9 @@ open class SwiftyCustomContentButton: SwiftyButton {
     override func configure() {
         super.configure()
         
+        customContentView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(customContentView)
-        customContentViewTopConstraint = customContentView.autoPinEdge(toSuperviewEdge: .top)
-        customContentViewBottomConstraint = customContentView.autoPinEdge(toSuperviewEdge: .bottom)
-        customContentView.autoPinEdge(toSuperviewEdge: .left)
-        customContentView.autoPinEdge(toSuperviewEdge: .right)
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[contentView]|", options: [], metrics: nil, views: ["contentView": customContentView]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[contentView]|", options: [], metrics: nil, views: ["contentView": customContentView]))
     }
 }

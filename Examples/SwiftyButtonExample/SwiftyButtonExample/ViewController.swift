@@ -17,20 +17,24 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let button = SwiftyCustomContentButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
         customButtonContainerView.addSubview(button)
-        button.autoPinEdgesToSuperviewEdges()
+        customButtonContainerView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[button]|", metrics: nil, views: ["button": button]))
+        customButtonContainerView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[button]|", metrics: nil, views: ["button": button]))
         button.buttonColor = UIColor(red: 52/255, green: 152/255, blue: 219/255, alpha: 1)
         button.shadowColor = UIColor(red: 41/255, green: 128/255, blue: 185/255, alpha: 1)
         
         let indicator = UIActivityIndicatorView(activityIndicatorStyle: .white)
+        indicator.translatesAutoresizingMaskIntoConstraints = false
         button.customContentView.addSubview(indicator)
-        indicator.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 0), excludingEdge: .right)
+        button.customContentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-10-[indicator]-10-|", metrics: nil, views: ["indicator": indicator]))
         indicator.startAnimating()
         
         let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
         button.customContentView.addSubview(label)
-        label.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 10), excludingEdge: .left)
-        label.autoPinEdge(.left, to: .right, of: indicator, withOffset: 10)
+        button.customContentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-10-[label]-10-|", metrics: nil, views: ["label": label]))
+        button.customContentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-15-[indicator]-10-[label]-15-|", metrics: nil, views: ["indicator": indicator, "label": label]))
         label.text = "Loading..."
         label.textColor = UIColor.white
         
@@ -41,9 +45,6 @@ class ViewController: UIViewController {
         zeroButton.cornerRadius = 0
         zeroButton.highlightedColor = UIColor.blue
         view.addSubview(zeroButton)
-        zeroButton.autoPinEdge(.top, to: .bottom, of: button, withOffset: 30)
-        zeroButton.autoAlignAxis(toSuperviewAxis: .vertical)
-        zeroButton.autoSetDimensions(to: CGSize(width: 200, height: 40))
         zeroButton.setTitle("Zero Button", for: .normal)
     }
 }
