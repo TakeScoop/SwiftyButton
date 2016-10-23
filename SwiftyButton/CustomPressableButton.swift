@@ -10,10 +10,10 @@ import Foundation
 
 open class CustomPressableButton: PressableButton {
     
-    public let customContentView = UIView()
+    public let contentView = UIView()
     
-    private var customContentViewTopConstraint: NSLayoutConstraint?
-    private var customContentViewBottomConstraint: NSLayoutConstraint?
+    private var topConstraint: NSLayoutConstraint?
+    private var bottomConstraint: NSLayoutConstraint?
     
     // @hack Intercept all touches on subviews
     override open func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
@@ -25,19 +25,19 @@ open class CustomPressableButton: PressableButton {
     
     override func updateTitleInsets() {
         super.updateTitleInsets()
-        customContentViewTopConstraint?.constant = titleEdgeInsets.top
-        customContentViewBottomConstraint?.constant = titleEdgeInsets.bottom
+        topConstraint?.constant = titleEdgeInsets.top
+        bottomConstraint?.constant = titleEdgeInsets.bottom
     }
     
     override func configure() {
         super.configure()
         
-        customContentView.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(customContentView)
-        let verticalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|[contentView]|", options: [], metrics: nil, views: ["contentView": customContentView])
-        customContentViewTopConstraint = verticalConstraints[0]
-        customContentViewBottomConstraint = verticalConstraints[1]
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(contentView)
+        let verticalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|[contentView]|", options: [], metrics: nil, views: ["contentView": contentView])
+        topConstraint = verticalConstraints[0]
+        bottomConstraint = verticalConstraints[1]
         addConstraints(verticalConstraints)
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[contentView]|", options: [], metrics: nil, views: ["contentView": customContentView]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[contentView]|", options: [], metrics: nil, views: ["contentView": contentView]))
     }
 }

@@ -28,6 +28,11 @@ open class PressableButton: UIButton {
     public struct ColorSet {
         let button: UIColor
         let shadow: UIColor
+        
+        public init(button: UIColor, shadow: UIColor) {
+            self.button = button
+            self.shadow = shadow
+        }
     }
     
     public var colors: ColorSet = Defaults.colors {
