@@ -32,7 +32,7 @@ button.cornerRadius  = 5
 
 ```swift
 let button = PressableButton()
-button.color = .init(button: .cyan, shadow: .blue)
+button.colors = .init(button: .cyan, shadow: .blue)
 button.shadowHeight = 5
 button.cornerRadius = 5
 ```
