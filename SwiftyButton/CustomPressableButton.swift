@@ -15,6 +15,12 @@ open class CustomPressableButton: PressableButton {
     private var topConstraint: NSLayoutConstraint?
     private var bottomConstraint: NSLayoutConstraint?
     
+    public override var cornerRadius: CGFloat {
+        didSet {
+            contentView.layer.cornerRadius = cornerRadius
+        }
+    }
+    
     // @hack Intercept all touches on subviews
     override open func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
         if let _ = super.hitTest(point, with: event) {
@@ -32,6 +38,7 @@ open class CustomPressableButton: PressableButton {
     override func configure() {
         super.configure()
         
+        contentView.layer.masksToBounds = true
         contentView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(contentView)
         let verticalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|[contentView]|", options: [], metrics: nil, views: ["contentView": contentView])

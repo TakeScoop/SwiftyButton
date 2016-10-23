@@ -85,11 +85,7 @@ open class PressableButton: UIButton {
     }
     
     override open var isHighlighted: Bool {
-        get {
-            return super.isHighlighted
-        }
-        set {
-            super.isHighlighted = newValue
+        didSet {
             updateTitleInsets()
         }
     }
