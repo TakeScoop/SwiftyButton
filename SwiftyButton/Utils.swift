@@ -24,9 +24,9 @@ enum Utils {
         shadowHeight: CGFloat,
         shadowColor: UIColor,
         cornerRadius: CGFloat,
-        buttonPressDepth: CGFloat) -> UIImage {
+        buttonPressDepth: Double) -> UIImage {
         
-        return buttonImage(color: color, shadowHeight: shadowHeight, shadowColor: shadowColor, cornerRadius: cornerRadius, frontImageOffset: shadowHeight * buttonPressDepth)
+        return buttonImage(color: color, shadowHeight: shadowHeight, shadowColor: shadowColor, cornerRadius: cornerRadius, frontImageOffset: shadowHeight * CGFloat(buttonPressDepth))
     }
     
     static func buttonImage(

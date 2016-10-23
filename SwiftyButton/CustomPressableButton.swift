@@ -1,5 +1,5 @@
 //
-//  SwiftyCustomContentButton.swift
+//  CustomPressableButton.swift
 //  SwiftyButton
 //
 //  Created by Loïs Di Qual on 11/25/15.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-open class SwiftyCustomContentButton: SwiftyButton {
+open class CustomPressableButton: PressableButton {
     
     public let customContentView = UIView()
     
