@@ -3,6 +3,8 @@ Change Log
 
 ## [master]
 
+ - **Breaking**: SwiftyButton has been split into two different button types: `FlatButton` and `PressableButton`. Please refer to the [README](./README.md) for more details.
+
 ## [0.5.0]
 
  - **Breaking**: Converted code base to Swift 3.0.

@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         customButtonContainerView.addSubview(button)
         customButtonContainerView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[button]|", metrics: nil, views: ["button": button]))
         customButtonContainerView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[button]|", metrics: nil, views: ["button": button]))
-        button.colors = PressableButton.ColorSet(
+        button.colors = .init(
             button: UIColor(red: 52/255, green: 152/255, blue: 219/255, alpha: 1),
             shadow: UIColor(red: 41/255, green: 128/255, blue: 185/255, alpha: 1)
         )
