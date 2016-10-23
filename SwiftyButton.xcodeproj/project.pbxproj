@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		C0372F2E1C0694F500E00B85 /* SwiftyCustomContentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0372F2D1C0694F500E00B85 /* SwiftyCustomContentButton.swift */; };
+		C09D784B1DBD427A0014565F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F04E171BFA842B00E9925E /* Utils.swift */; };
 		C0F04E0F1BFA83F700E9925E /* SwiftyButton.h in Headers */ = {isa = PBXBuildFile; fileRef = C0F04E0E1BFA83F700E9925E /* SwiftyButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C0F04E181BFA842B00E9925E /* SwiftyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F04E161BFA842B00E9925E /* SwiftyButton.swift */; };
-		C0F04E191BFA842B00E9925E /* SwiftyButton+ResizableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F04E171BFA842B00E9925E /* SwiftyButton+ResizableImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +20,7 @@
 		C0F04E0E1BFA83F700E9925E /* SwiftyButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftyButton.h; sourceTree = "<group>"; };
 		C0F04E101BFA83F700E9925E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0F04E161BFA842B00E9925E /* SwiftyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyButton.swift; sourceTree = "<group>"; };
-		C0F04E171BFA842B00E9925E /* SwiftyButton+ResizableImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwiftyButton+ResizableImage.swift"; sourceTree = "<group>"; };
+		C0F04E171BFA842B00E9925E /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +64,7 @@
 			children = (
 				C0F04E161BFA842B00E9925E /* SwiftyButton.swift */,
 				C0372F2D1C0694F500E00B85 /* SwiftyCustomContentButton.swift */,
-				C0F04E171BFA842B00E9925E /* SwiftyButton+ResizableImage.swift */,
+				C0F04E171BFA842B00E9925E /* Utils.swift */,
 				C0F04E0E1BFA83F700E9925E /* SwiftyButton.h */,
 				C0F04E101BFA83F700E9925E /* Info.plist */,
 			);
@@ -152,7 +152,7 @@
 			files = (
 				C0F04E181BFA842B00E9925E /* SwiftyButton.swift in Sources */,
 				C0372F2E1C0694F500E00B85 /* SwiftyCustomContentButton.swift in Sources */,
-				C0F04E191BFA842B00E9925E /* SwiftyButton+ResizableImage.swift in Sources */,
+				C09D784B1DBD427A0014565F /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

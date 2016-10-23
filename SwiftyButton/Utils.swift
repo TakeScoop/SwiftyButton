@@ -1,5 +1,5 @@
 //
-//  SwiftyButton+ResizableImage.swift
+//  Utils.swift
 //  Scoop
 //
 //  Created by Loïs Di Qual on 11/15/15.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-extension SwiftyButton {
+enum Utils {
     
-    class func buttonImage(
+    static func buttonImage(
         color: UIColor,
         shadowHeight: CGFloat,
         shadowColor: UIColor,
@@ -19,7 +19,7 @@ extension SwiftyButton {
         return buttonImage(color: color, shadowHeight: shadowHeight, shadowColor: shadowColor, cornerRadius: cornerRadius, frontImageOffset: 0)
     }
     
-    class func highlightedButtonImage(
+    static func highlightedButtonImage(
         color: UIColor,
         shadowHeight: CGFloat,
         shadowColor: UIColor,
@@ -29,7 +29,7 @@ extension SwiftyButton {
         return buttonImage(color: color, shadowHeight: shadowHeight, shadowColor: shadowColor, cornerRadius: cornerRadius, frontImageOffset: shadowHeight * buttonPressDepth)
     }
     
-    private class func buttonImage(
+    static func buttonImage(
         color: UIColor,
         shadowHeight: CGFloat,
         shadowColor: UIColor,
@@ -37,9 +37,9 @@ extension SwiftyButton {
         frontImageOffset: CGFloat) -> UIImage {
         
         // Create foreground and background images
-        let width      = max(1, cornerRadius * 2 + shadowHeight)
-        let height     = max(1, cornerRadius * 2 + shadowHeight)
-        let size       = CGSize(width: width, height: height)
+        let width = max(1, cornerRadius * 2 + shadowHeight)
+        let height = max(1, cornerRadius * 2 + shadowHeight)
+        let size = CGSize(width: width, height: height)
             
         let frontImage = image(color: color, size: size, cornerRadius: cornerRadius)
         var backImage: UIImage? = nil
@@ -60,10 +60,10 @@ extension SwiftyButton {
         let capInsets = UIEdgeInsets(top: cornerRadius + frontImageOffset, left: cornerRadius, bottom: cornerRadius + shadowHeight - frontImageOffset, right: cornerRadius)
         let resizableImage = nonResizableImage?.resizableImage(withCapInsets: capInsets, resizingMode: .stretch)
             
-        return resizableImage!
+        return resizableImage ?? UIImage()
     }
     
-    private class func image(color: UIColor, size: CGSize, cornerRadius: CGFloat) -> UIImage {
+    static func image(color: UIColor, size: CGSize, cornerRadius: CGFloat) -> UIImage {
         
         let rect = CGRect(origin: CGPoint(x: 0, y: 0), size: size)
         
@@ -86,6 +86,6 @@ extension SwiftyButton {
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        return image!
+        return image ?? UIImage()
     }
 }
