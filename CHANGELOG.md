@@ -3,7 +3,11 @@ Change Log
 
 ## [master]
 
+## [0.6.0]
+
  - **Breaking**: SwiftyButton has been split into two different button types: `FlatButton` and `PressableButton`. Please refer to the [README](./README.md) for more details.
+ - Setting `cornerRadius` on a `CustomPressableButton` now adjusts the corner radius of the content view.
+   [#4](https://github.com/TakeScoop/SwiftyButton/issues/4)
 
 ## [0.5.0]
 
@@ -37,7 +41,8 @@ Change Log
 
  - Initial release
 
-[master]: https://github.com/TakeScoop/scoop-ios/compare/0.5.0...master
+[master]: https://github.com/TakeScoop/scoop-ios/compare/0.6.0...master
+[0.5.0]: https://github.com/TakeScoop/scoop-ios/compare/0.5.0...0.6.0
 [0.5.0]: https://github.com/TakeScoop/scoop-ios/compare/0.4.0...0.5.0
 [0.4.0]: https://github.com/TakeScoop/scoop-ios/compare/0.3.0...0.4.0
 [0.3.0]: https://github.com/TakeScoop/scoop-ios/compare/0.2.0...0.3.0
