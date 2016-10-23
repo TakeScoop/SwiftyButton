@@ -26,7 +26,7 @@ open class SwiftyCustomContentButton: SwiftyButton {
     override func updateTitleInsets() {
         super.updateTitleInsets()
         customContentViewTopConstraint?.constant = titleEdgeInsets.top
-        customContentViewBottomConstraint?.constant = -titleEdgeInsets.bottom
+        customContentViewBottomConstraint?.constant = titleEdgeInsets.bottom
     }
     
     override func configure() {
@@ -34,7 +34,10 @@ open class SwiftyCustomContentButton: SwiftyButton {
         
         customContentView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(customContentView)
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[contentView]|", options: [], metrics: nil, views: ["contentView": customContentView]))
+        let verticalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|[contentView]|", options: [], metrics: nil, views: ["contentView": customContentView])
+        customContentViewTopConstraint = verticalConstraints[0]
+        customContentViewBottomConstraint = verticalConstraints[1]
+        addConstraints(verticalConstraints)
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[contentView]|", options: [], metrics: nil, views: ["contentView": customContentView]))
     }
 }
