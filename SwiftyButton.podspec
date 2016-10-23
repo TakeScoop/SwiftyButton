@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.summary      = "Simple and customizable button in Swift"
 
   s.description  = <<-DESC
-                   SwiftyButton is a UIButton subclass that allows you to create shadowed/pressable buttons via a very simple interface.
+                   SwiftyButton allows you to fully customize the style of your buttons with two UIButton subclasses: `FlatButton` and `PressableButton`.
                    DESC
 
   s.homepage     = "https://github.com/TakeScoop/SwiftyButton"
