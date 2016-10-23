@@ -89,6 +89,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C0F04E131BFA83F700E9925E /* Build configuration list for PBXNativeTarget "SwiftyButton" */;
 			buildPhases = (
+				C09D784C1DBD42AF0014565F /* ShellScript */,
 				C0F04E061BFA83F700E9925E /* Sources */,
 				C0F04E071BFA83F700E9925E /* Frameworks */,
 				C0F04E081BFA83F700E9925E /* Headers */,
@@ -144,6 +145,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C09D784C1DBD42AF0014565F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C0F04E061BFA83F700E9925E /* Sources */ = {

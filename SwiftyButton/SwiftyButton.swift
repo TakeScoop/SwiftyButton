@@ -123,8 +123,8 @@ open class SwiftyButton: UIButton {
         let highlightedImage = Utils.highlightedButtonImage(color: highlightedColor ?? buttonColor, shadowHeight: shadowHeight, shadowColor: shadowColor, cornerRadius: cornerRadius, buttonPressDepth: buttonPressDepth)
         let disabledImage = Utils.buttonImage(color: disabledButtonColor, shadowHeight: shadowHeight, shadowColor: disabledShadowColor, cornerRadius: cornerRadius)
         
-        setBackgroundImage(normalImage,      for: .normal)
+        setBackgroundImage(normalImage, for: .normal)
         setBackgroundImage(highlightedImage, for: .highlighted)
-        setBackgroundImage(disabledImage,    for: .disabled)
+        setBackgroundImage(disabledImage, for: .disabled)
     }
 }

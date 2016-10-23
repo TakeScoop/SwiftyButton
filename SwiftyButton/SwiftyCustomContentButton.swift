@@ -12,7 +12,7 @@ open class SwiftyCustomContentButton: SwiftyButton {
     
     public let customContentView = UIView()
     
-    private var customContentViewTopConstraint:    NSLayoutConstraint?
+    private var customContentViewTopConstraint: NSLayoutConstraint?
     private var customContentViewBottomConstraint: NSLayoutConstraint?
     
     // @hack Intercept all touches on subviews
