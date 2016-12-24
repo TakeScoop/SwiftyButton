@@ -1,15 +1,27 @@
-SwiftyButton
+SwiftyButton 
 ============
 
 Simple and customizable button in Swift.
 
 ![](Examples/demo.gif)
 
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
 Installation
 ------------
 
+Cocoapods
+
+
 ```
 pod 'SwiftyButton'
+```
+
+Carthage
+
+
+```
+github 'TakeScoop/SwiftyButton'
 ```
 
 Usage
