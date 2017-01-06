@@ -1,4 +1,4 @@
-SwiftyButton 
+SwiftyButton
 ============
 
 Simple and customizable button in Swift.
