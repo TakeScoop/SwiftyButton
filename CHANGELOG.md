@@ -3,6 +3,8 @@ Change Log
 
 ## [master]
 
+ - Adding Carthage support.
+
 ## [0.6.0]
 
  - **Breaking**: SwiftyButton has been split into two different button types: `FlatButton` and `PressableButton`. Please refer to the [README](./README.md) for more details.
