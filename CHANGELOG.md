@@ -8,6 +8,7 @@ Change Log
  - **Breaking**: SwiftyButton has been split into two different button types: `FlatButton` and `PressableButton`. Please refer to the [README](./README.md) for more details.
  - Setting `cornerRadius` on a `CustomPressableButton` now adjusts the corner radius of the content view.
    [#4](https://github.com/TakeScoop/SwiftyButton/issues/4)
+ - Adding Carthage support.
 
 ## [0.5.0]
 
