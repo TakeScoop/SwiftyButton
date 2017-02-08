@@ -74,11 +74,12 @@ button.depth = 0.5 // In percentage of shadowHeight
 
 ### Interface Builder (Storyboard/XIB)
 
-Add a `UIButton` as usual, modify the underlying class to `FlatButton`, and make sure that the button type is set to `Custom`:
+Add a `UIButton` as usual, then:
+ - Modify the underlying class to `FlatButton/PressableButton`, and that the module is set to `SwiftyButton`
+ - Make sure that the button type is set to `Custom`
 
-<img src="https://www.dropbox.com/s/krkj3klxcfxjsjf/Screenshot%202015-11-16%2015.35.59.png?raw=1" width="30%" style="vertical-align:top">
-<img src="https://www.dropbox.com/s/4xtllxwjpqy3uia/Screenshot%202015-11-16%2015.33.45.png?raw=1" width="30%" style="vertical-align:top">
-<img src="https://www.dropbox.com/s/2q78xgbh4rspv4b/Screenshot%202015-11-28%2022.00.21.png?raw=1" width="30%" style="vertical-align:top">
+<img src="https://dl.dropboxusercontent.com/s/w48pvk6u15dbmv5/2017-02-07%20at%205.13%20PM.png" width="30%" style="vertical-align:top">
+<img src="https://dl.dropboxusercontent.com/s/khuqvgfjk8yjs2v/2017-02-07%20at%205.13%20PM%20%281%29.png" width="25%" style="vertical-align:top">
 
 
 Defaults
