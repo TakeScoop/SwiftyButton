@@ -31,6 +31,10 @@ let flatButton = FlatButton(frame: CGRect(x: 0, y: 0, width: 120, height: 50))
 flatButton.setTitle("Flat Button", for: .normal)
 flatButton.setTitleColor(.white, for: .normal)
 flatButton.color = UIColor(red: 230 / 255, green: 126 / 255, blue: 34 / 255, alpha: 1)
+flatButton.selectedColor = UIColor(red: 231 / 255, green: 60 / 255, blue: 0, alpha: 1)
 flatButton.highlightedColor = UIColor(red: 211 / 255, green: 84 / 255, blue: 0, alpha: 1)
 
 flatButton.isHighlighted = true
+
+flatButton.isHighlighted = false
+flatButton.isSelected = true

@@ -58,6 +58,7 @@ Here is a list of all the properties that you can modify. Those are all editable
 ```swift
 button.color = .cyan
 button.highlightedColor = .cyan
+button.selectedColor = .blue
 button.disabledButtonColor = .gray
 button.cornerRadius = 8
 ```
