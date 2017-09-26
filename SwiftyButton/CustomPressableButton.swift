@@ -23,7 +23,7 @@ open class CustomPressableButton: PressableButton {
     
     // @hack Intercept all touches on subviews
     override open func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
-        if let _ = super.hitTest(point, with: event) {
+        if super.hitTest(point, with: event) != nil {
             return self
         }
         return nil

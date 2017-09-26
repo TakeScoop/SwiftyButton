@@ -13,12 +13,11 @@ open class PressableButton: UIButton {
     
     public enum Defaults {
         public static var colors = ColorSet(
-            button: UIColor(colorLiteralRed: 52 / 255, green: 152 / 255, blue: 219 / 255, alpha: 1),
-            shadow: UIColor(colorLiteralRed: 41 / 255, green: 128 / 255, blue: 185 / 255, alpha: 1)
-        )
-        public static var disabledColors = ColorSet(
-            button: UIColor(colorLiteralRed: 41 / 255, green: 128 / 255, blue: 185 / 255, alpha: 1),
-            shadow: UIColor(colorLiteralRed: 127 / 255, green: 140 / 255, blue: 141 / 255, alpha: 1)
+            button: UIColor(red: 52 / 255, green: 152 / 255, blue: 219 / 255, alpha: 1),
+            shadow: UIColor(red: 41 / 255, green: 128 / 255, blue: 185 / 255, alpha: 1)
+      );       public static var disabledColors = ColorSet(
+            button: UIColor(red: 41 / 255, green: 128 / 255, blue: 185 / 255, alpha: 1),
+            shadow: UIColor(red: 127 / 255, green: 140 / 255, blue: 141 / 255, alpha: 1)
         )
         public static var shadowHeight: CGFloat = 3
         public static var depth: Double = 0.7
