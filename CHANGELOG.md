@@ -3,6 +3,8 @@ Change Log
 
 ## [master]
 
+## [0.8.0]
+
  - Added Swift 4 support.
 
 ## [0.7.0]
@@ -49,6 +51,7 @@ Change Log
  - Initial release
 
 [master]: https://github.com/TakeScoop/SwiftyButton/tree/master
+[0.8.0]: https://github.com/TakeScoop/scoop-ios/releases/tag/0.8.0
 [0.7.0]: https://github.com/TakeScoop/scoop-ios/releases/tag/0.7.0
 [0.6.0]: https://github.com/TakeScoop/scoop-ios/compare/0.5.0...0.6.0
 [0.5.0]: https://github.com/TakeScoop/scoop-ios/compare/0.4.0...0.5.0
