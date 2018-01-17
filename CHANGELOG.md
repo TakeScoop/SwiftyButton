@@ -3,6 +3,8 @@ Change Log
 
 ## [master]
 
+ - Added Swift 4 support.
+
 ## [0.7.0]
 
  - Added a `FlatButton.selectedColor` property to customize the appearance of a flat button in its selected state.
