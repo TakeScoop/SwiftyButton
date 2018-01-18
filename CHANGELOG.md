@@ -3,6 +3,9 @@ Change Log
 
 ## [master]
 
+ - Fixed an issue that would cause images in `PressableButton` to not move properly on highlight.
+   [#14](https://github.com/TakeScoop/SwiftyButton/issues/14)
+
 ## [0.8.0]
 
  - Added Swift 4 support.
