@@ -115,13 +115,13 @@ open class PressableButton: UIButton {
     func updateTitleInsets() {
         let topPadding = isHighlighted ? shadowHeight * CGFloat(depth) : 0
         let bottomPadding = isHighlighted ? shadowHeight * (1 - CGFloat(depth)) : shadowHeight
-        titleEdgeInsets = UIEdgeInsets(top: topPadding, left: titleEdgeInsets.left, bottom: bottomPadding, right: titleEdgeInsets.right)
+        super.titleEdgeInsets = UIEdgeInsets(top: topPadding, left: titleEdgeInsets.left, bottom: bottomPadding, right: titleEdgeInsets.right)
     }
     
     func updateImageInsets() {
         let topPadding = isHighlighted ? shadowHeight * CGFloat(depth) : 0
         let bottomPadding = isHighlighted ? shadowHeight * (1 - CGFloat(depth)) : shadowHeight
-        imageEdgeInsets = UIEdgeInsets(top: topPadding, left: imageEdgeInsets.left, bottom: bottomPadding, right: imageEdgeInsets.right)
+        super.imageEdgeInsets = UIEdgeInsets(top: topPadding, left: imageEdgeInsets.left, bottom: bottomPadding, right: imageEdgeInsets.right)
     }
     
     fileprivate func updateBackgroundImages() {
