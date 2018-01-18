@@ -52,6 +52,7 @@ open class PressableButton: UIButton {
         didSet {
             updateBackgroundImages()
             updateTitleInsets()
+            updateImageInsets()
         }
     }
     
@@ -60,6 +61,7 @@ open class PressableButton: UIButton {
         didSet {
             updateBackgroundImages()
             updateTitleInsets()
+            updateImageInsets()
         }
     }
     
@@ -67,6 +69,18 @@ open class PressableButton: UIButton {
     public var cornerRadius: CGFloat = Defaults.cornerRadius {
         didSet {
             updateBackgroundImages()
+        }
+    }
+    
+    open override var titleEdgeInsets: UIEdgeInsets {
+        didSet {
+            updateTitleInsets()
+        }
+    }
+    
+    open override var imageEdgeInsets: UIEdgeInsets {
+        didSet {
+            updateImageInsets()
         }
     }
     
@@ -87,6 +101,7 @@ open class PressableButton: UIButton {
     override open var isHighlighted: Bool {
         didSet {
             updateTitleInsets()
+            updateImageInsets()
         }
     }
     
@@ -100,7 +115,13 @@ open class PressableButton: UIButton {
     func updateTitleInsets() {
         let topPadding = isHighlighted ? shadowHeight * CGFloat(depth) : 0
         let bottomPadding = isHighlighted ? shadowHeight * (1 - CGFloat(depth)) : shadowHeight
-        titleEdgeInsets = UIEdgeInsets(top: topPadding, left: 0, bottom: bottomPadding, right: 0)
+        titleEdgeInsets = UIEdgeInsets(top: topPadding, left: titleEdgeInsets.left, bottom: bottomPadding, right: titleEdgeInsets.right)
+    }
+    
+    func updateImageInsets() {
+        let topPadding = isHighlighted ? shadowHeight * CGFloat(depth) : 0
+        let bottomPadding = isHighlighted ? shadowHeight * (1 - CGFloat(depth)) : shadowHeight
+        imageEdgeInsets = UIEdgeInsets(top: topPadding, left: imageEdgeInsets.left, bottom: bottomPadding, right: imageEdgeInsets.right)
     }
     
     fileprivate func updateBackgroundImages() {

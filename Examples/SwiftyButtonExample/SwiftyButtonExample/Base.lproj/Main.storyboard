@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,11 +23,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCF-7Z-a9u" customClass="PressableButton" customModule="SwiftyButton">
+                                <rect key="frame" x="133.5" y="40" width="108" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="JIt-2M-lPL"/>
                                     <constraint firstAttribute="width" constant="200" id="kYA-B2-qyN"/>
                                 </constraints>
-                                <state key="normal" title="Press me">
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="50" maxY="0.0"/>
+                                <state key="normal" title="Press me" image="icFavoriteOrangeOn16">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -42,6 +47,7 @@
                                 </variation>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0VC-Tk-Okj">
+                                <rect key="frame" x="251.5" y="40" width="107.5" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="bUp-Qm-6IM"/>
                                     <constraint firstAttribute="height" constant="50" id="mNo-GQ-HZ4"/>
@@ -53,6 +59,7 @@
                                 </variation>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0vH-Wp-tiw" customClass="FlatButton" customModule="SwiftyButton">
+                                <rect key="frame" x="16" y="40" width="107.5" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="KnS-bA-CKM"/>
                                     <constraint firstAttribute="width" constant="200" id="fY5-Is-knb"/>
@@ -94,4 +101,7 @@
             <point key="canvasLocation" x="515" y="407"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icFavoriteOrangeOn16" width="16" height="16"/>
+    </resources>
 </document>
