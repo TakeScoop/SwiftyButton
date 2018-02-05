@@ -35,20 +35,20 @@ open class PressableButton: UIButton {
         }
     }
     
-    public var colors: ColorSet = Defaults.colors {
+    open var colors: ColorSet = Defaults.colors {
         didSet {
             updateBackgroundImages()
         }
     }
     
-    public var disabledColors: ColorSet = Defaults.disabledColors {
+    open var disabledColors: ColorSet = Defaults.disabledColors {
         didSet {
             updateBackgroundImages()
         }
     }
     
     @IBInspectable
-    public var shadowHeight: CGFloat = Defaults.shadowHeight {
+    open var shadowHeight: CGFloat = Defaults.shadowHeight {
         didSet {
             updateBackgroundImages()
             updateTitleInsets()
@@ -57,7 +57,7 @@ open class PressableButton: UIButton {
     }
     
     @IBInspectable
-    public var depth: Double = Defaults.depth {
+    open var depth: Double = Defaults.depth {
         didSet {
             updateBackgroundImages()
             updateTitleInsets()
@@ -66,7 +66,7 @@ open class PressableButton: UIButton {
     }
     
     @IBInspectable
-    public var cornerRadius: CGFloat = Defaults.cornerRadius {
+    open var cornerRadius: CGFloat = Defaults.cornerRadius {
         didSet {
             updateBackgroundImages()
         }
