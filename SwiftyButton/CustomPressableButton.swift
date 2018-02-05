@@ -15,7 +15,7 @@ open class CustomPressableButton: PressableButton {
     private var topConstraint: NSLayoutConstraint?
     private var bottomConstraint: NSLayoutConstraint?
     
-    public override var cornerRadius: CGFloat {
+    override open var cornerRadius: CGFloat {
         didSet {
             contentView.layer.cornerRadius = cornerRadius
         }

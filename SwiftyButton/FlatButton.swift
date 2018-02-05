@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-public class FlatButton: UIButton {
+open class FlatButton: UIButton {
     
     public enum Defaults {
         public static var color = UIColor(red: 52 / 255, green: 152 / 255, blue: 219 / 255, alpha: 1)
@@ -20,35 +20,35 @@ public class FlatButton: UIButton {
     }
     
     @IBInspectable
-    public var color: UIColor = Defaults.color {
+    open var color: UIColor = Defaults.color {
         didSet {
             updateBackgroundImages()
         }
     }
     
     @IBInspectable
-    public var highlightedColor: UIColor = Defaults.highlightedColor {
+    open var highlightedColor: UIColor = Defaults.highlightedColor {
         didSet {
             updateBackgroundImages()
         }
     }
     
     @IBInspectable
-    public var selectedColor: UIColor = Defaults.selectedColor {
+    open var selectedColor: UIColor = Defaults.selectedColor {
         didSet {
             updateBackgroundImages()
         }
     }
     
     @IBInspectable
-    public var disabledColor: UIColor = Defaults.disabledColor {
+    open var disabledColor: UIColor = Defaults.disabledColor {
         didSet {
             updateBackgroundImages()
         }
     }
     
     @IBInspectable
-    public var cornerRadius: CGFloat = Defaults.cornerRadius {
+    open var cornerRadius: CGFloat = Defaults.cornerRadius {
         didSet {
             updateBackgroundImages()
         }
