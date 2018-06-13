@@ -5,6 +5,7 @@ Change Log
 
  - Fixed an issue that would cause images in `PressableButton` to not move properly on highlight.
    [#14](https://github.com/TakeScoop/SwiftyButton/issues/14)
+ - Made the `FlatButton` class open to allow subclassing.
 
 ## [0.8.0]
 
