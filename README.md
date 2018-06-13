@@ -141,6 +141,23 @@ More examples
 
 Look at the [Examples](Examples/) folder to see more button examples.
 
+Contribute
+----------
+
+### Publishing a new version
+
+Here's an example of a version bump: [bump to 0.8.0](https://github.com/TakeScoop/SwiftyButton/commit/d6e85522835db6f4c39e4c3ee8114d37f6dc9531).
+
+Replace `NEW_VERSION` with the version you're about to publish.
+
+ - Checkout the `master` branch and ensure it's up-to-date.
+ - Open `SwiftyButton.xcworkspace` and edit settings for the `SwiftyButton` target. Change the target version to `NEW_VERSION`.
+ - Open `CHANGELOG.md` and add a new section `[NEW_VERSION]`. At the bottom of the document, copy a version anchor and link to the new version tag (which we'll create later). Insert a new empty `[master]` section on top.
+ - Open `SwiftyButton.podspec` and edit `s.version` to `NEW_VERSION`.
+ - Commit your changes as `Bump to NEW_VERSION`.
+ - Create a new git tag named `NEW_VERSION` and push your commit + tag to Github.
+ - Push the new pod version with `$ pod trunk push ./`
+
 License
 -------
 
