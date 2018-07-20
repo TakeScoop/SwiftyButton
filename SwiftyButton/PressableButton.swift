@@ -37,46 +37,50 @@ open class PressableButton: UIButton {
     
     public var colors: ColorSet = Defaults.colors {
         didSet {
-            setNeedsDisplay()
+            updateBackgroundImages()
         }
     }
     
     public var disabledColors: ColorSet = Defaults.disabledColors {
         didSet {
-            setNeedsDisplay()
+            updateBackgroundImages()
         }
     }
     
     @IBInspectable
     public var shadowHeight: CGFloat = Defaults.shadowHeight {
         didSet {
-            setNeedsDisplay()
+            updateBackgroundImages()
+            updateTitleInsets()
+            updateImageInsets()
         }
     }
     
     @IBInspectable
     public var depth: Double = Defaults.depth {
         didSet {
-            setNeedsDisplay()
+            updateBackgroundImages()
+            updateTitleInsets()
+            updateImageInsets()
         }
     }
     
     @IBInspectable
     public var cornerRadius: CGFloat = Defaults.cornerRadius {
         didSet {
-            setNeedsDisplay()
+            updateBackgroundImages()
         }
     }
     
     open override var titleEdgeInsets: UIEdgeInsets {
         didSet {
-            setNeedsDisplay()
+            updateTitleInsets()
         }
     }
     
     open override var imageEdgeInsets: UIEdgeInsets {
         didSet {
-            setNeedsDisplay()
+            updateImageInsets()
         }
     }
     
@@ -85,26 +89,20 @@ open class PressableButton: UIButton {
     public override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
-        setNeedsDisplay()
+        updateBackgroundImages()
     }
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         configure()
-        setNeedsDisplay()
+        updateBackgroundImages()
     }
     
     override open var isHighlighted: Bool {
         didSet {
-            setNeedsDisplay()
+            updateTitleInsets()
+            updateImageInsets()
         }
-    }
-    
-    override open func draw(_ rect: CGRect) {
-        updateBackgroundImages()
-        updateTitleInsets()
-        updateImageInsets()
-        super.draw(rect)
     }
     
     // MARK: - Internal methods
