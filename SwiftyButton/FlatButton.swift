@@ -22,35 +22,35 @@ open class FlatButton: UIButton {
     @IBInspectable
     public var color: UIColor = Defaults.color {
         didSet {
-            updateBackgroundImages()
+            setNeedsDisplay()
         }
     }
     
     @IBInspectable
     public var highlightedColor: UIColor = Defaults.highlightedColor {
         didSet {
-            updateBackgroundImages()
+            setNeedsDisplay()
         }
     }
     
     @IBInspectable
     public var selectedColor: UIColor = Defaults.selectedColor {
         didSet {
-            updateBackgroundImages()
+            setNeedsDisplay()
         }
     }
     
     @IBInspectable
     public var disabledColor: UIColor = Defaults.disabledColor {
         didSet {
-            updateBackgroundImages()
+            setNeedsDisplay()
         }
     }
     
     @IBInspectable
     public var cornerRadius: CGFloat = Defaults.cornerRadius {
         didSet {
-            updateBackgroundImages()
+            setNeedsDisplay()
         }
     }
     
@@ -59,13 +59,18 @@ open class FlatButton: UIButton {
     public override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
-        updateBackgroundImages()
+        setNeedsDisplay()
     }
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         configure()
+        setNeedsDisplay()
+    }
+    
+    override open func draw(_ rect: CGRect) {
         updateBackgroundImages()
+        super.draw(rect)
     }
     
     // MARK: - Internal methods

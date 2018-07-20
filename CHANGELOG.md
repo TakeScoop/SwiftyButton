@@ -3,6 +3,8 @@ Change Log
 
 ## [master]
 
+ - Improves the performace of `FlatButton` when setting its properties multiple times.
+
 ## [0.8.1]
 
  - Fixed an issue that would cause images in `PressableButton` to not move properly on highlight.
