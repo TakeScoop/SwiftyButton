@@ -3,7 +3,7 @@ Change Log
 
 ## [master]
 
- - Improves the performace of `FlatButton` when setting its properties multiple times.
+ - Improves the performace of `FlatButton` and `PressableButton` when setting its properties multiple times.
 
 ## [0.8.1]
 

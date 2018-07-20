@@ -68,12 +68,12 @@ open class FlatButton: UIButton {
         setNeedsDisplay()
     }
     
-    // MARK: - Internal methods
-    
     override open func draw(_ rect: CGRect) {
         updateBackgroundImages()
         super.draw(rect)
     }
+    
+    // MARK: - Internal methods
     
     fileprivate func configure() {
         adjustsImageWhenDisabled = false
