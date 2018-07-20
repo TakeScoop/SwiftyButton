@@ -3,6 +3,8 @@ Change Log
 
 ## [master]
 
+## [0.8.2]
+
  - Improves the performace of `FlatButton` when setting its properties multiple times.
 
 ## [0.8.1]
@@ -59,6 +61,7 @@ Change Log
  - Initial release
 
 [master]: https://github.com/TakeScoop/SwiftyButton/tree/master
+[0.8.2]: https://github.com/TakeScoop/scoop-ios/releases/tag/0.8.2
 [0.8.1]: https://github.com/TakeScoop/scoop-ios/releases/tag/0.8.1
 [0.8.0]: https://github.com/TakeScoop/scoop-ios/releases/tag/0.8.0
 [0.7.0]: https://github.com/TakeScoop/scoop-ios/releases/tag/0.7.0
