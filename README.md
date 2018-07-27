@@ -1,6 +1,8 @@
 SwiftyButton
 ============
 
+**Maintainer(s)**: [@camanjj](https://github.com/camanjj)
+
 Simple and customizable button in Swift.
 
 ![](Examples/demo.gif)
