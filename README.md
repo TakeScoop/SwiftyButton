@@ -1,7 +1,7 @@
 SwiftyButton
 ============
 
-**Maintainer(s)**: [@camanjj](https://github.com/camanjj)
+**Maintainer(s):** [@nickm01](https://github.com/nickm01) [@pmacro](https://github.com/pmacro) [@aryamansharda](https://github.com/aryamansharda) 
 
 Simple and customizable button in Swift.
 
