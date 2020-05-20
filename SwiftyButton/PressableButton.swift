@@ -26,8 +26,8 @@ open class PressableButton: UIButton {
     }
     
     public struct ColorSet {
-        let button: UIColor
-        let shadow: UIColor
+        var button: UIColor
+        var shadow: UIColor
         
         public init(button: UIColor, shadow: UIColor) {
             self.button = button
@@ -44,6 +44,23 @@ open class PressableButton: UIButton {
     public var disabledColors: ColorSet = Defaults.disabledColors {
         didSet {
             updateBackgroundImages()
+        }
+    }
+    
+    @IBInspectable
+    public var buttonColor:UIColor? {
+        didSet {
+            if let buttonColor = buttonColor {
+                colors.button = buttonColor
+            }
+        }
+    }
+    @IBInspectable
+    public var shadowColor:UIColor? {
+        didSet {
+            if let shadowColor = shadowColor {
+                colors.shadow = shadowColor
+            }
         }
     }
     
